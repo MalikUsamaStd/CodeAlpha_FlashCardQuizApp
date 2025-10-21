@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import FlashCardManager from "./Components/FlashcardManager";
 import FlashCardViewer from "./Components/FlashCardViewer";
+import FlashCardManager from "./Components/FlashCardManager";
 
 const App = () => {
   return (
