@@ -1,0 +1,139 @@
+/* 🌈 --- Global Layout --- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Light & Dark Mode Backgrounds */
+body.light-mode {
+  background: linear-gradient(135deg, #f3e8ff, #dbeafe);
+  color: #1f2937;
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #111827, #1e1b4b);
+  color: #f3f4f6;
+}
+
+/* 🌙 Dark/Light Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: linear-gradient(90deg, #9333ea, #6366f1);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
+}
+
+/* 🧠 Flashcard Container */
+.flashcard-container {
+  width: 360px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .flashcard-container {
+  background: rgba(31, 41, 55, 0.7);
+  box-shadow: 0 8px 25px rgba(147, 51, 234, 0.25);
+}
+
+.flashcard-container:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 35px rgba(147, 51, 234, 0.4);
+}
+
+/* ✨ Title */
+.flashcard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #6d28d9;
+}
+
+body.dark-mode .flashcard-title {
+  color: #c4b5fd;
+}
+
+/* 📝 Question/Answer Text */
+.flashcard-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  transition: color 0.4s ease;
+}
+
+body.dark-mode .flashcard-text {
+  color: #f3f4f6;
+}
+
+/* 🔘 Buttons */
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #9333ea, #6366f1);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.5);
+}
+
+.btn-nav {
+  background: #e5e7eb;
+}
+
+.btn-nav:hover {
+  background: #d1d5db;
+  transform: translateY(-2px);
+}
+
+body.dark-mode .btn-nav {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+body.dark-mode .btn-nav:hover {
+  background: #4b5563;
+}
+
+/* ⚙️ Button Container */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease-in-out;
+}
