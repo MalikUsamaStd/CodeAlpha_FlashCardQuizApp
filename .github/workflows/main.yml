@@ -4,11 +4,6 @@ on:
   push:
     branches: [main]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,11 +15,14 @@ jobs:
       - name: Setup Node Js
         uses: actions/setup-node@v6.0.0
         with:
-          node-version: 20.19.5
+          node-version: 22.x
           cache: 'npm'
 
-      - name: Install Dependencies
-        run: npm install
+      # Clean cache and reinstall Rollup properly
+      - name: Clean Install (Fix Rollup Bug)
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
       - name: Build Vite React App
         run: npm run build
