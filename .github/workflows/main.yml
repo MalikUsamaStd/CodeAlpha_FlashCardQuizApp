@@ -4,7 +4,10 @@ on:
   push:
     branches: [main]
 
-
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -30,6 +33,4 @@ jobs:
         uses: actions/upload-artifact@v4.6.2
         with:
           name: vite-react-build
-          path: out/
-
- 
+          path: dist/
