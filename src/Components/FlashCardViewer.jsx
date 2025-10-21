@@ -7,7 +7,7 @@ const initialCards = [
   { id: 3, question: "What is a component?", answer: "A reusable piece of UI in React." },
 ];
 
-const FlashcardViewer = () => {
+const FlashCardViewer = () => {
   const [cards] = useState(initialCards);
   const [current, setCurrent] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
@@ -62,4 +62,4 @@ const FlashcardViewer = () => {
   );
 };
 
-export default FlashcardViewer;
+export default FlashCardViewer;

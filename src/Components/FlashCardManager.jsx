@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FlashcardManager = () => {
+const FlashCardManager = () => {
   const [flashcards, setFlashcards] = useState([
     { id: 1, question: "What is React?", answer: "A JavaScript library for building UIs." },
   ]);
@@ -131,4 +131,4 @@ const FlashcardManager = () => {
   );
 };
 
-export default FlashcardManager;
+export default FlashCardManager;
